@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html ng-app="root">
+<head>
+    <title>discloud-web</title>
+    <link href="{{ url_for('static', filename='css/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/kendo/kendo.common.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/kendo/kendo.common-bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/kendo/kendo.uniform.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/kendo/kendo.dataviz.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/kendo/kendo.dataviz.uniform.min.css') }}" rel="stylesheet" />
+    <!--
+    <link href="{{ url_for('static', filename='css/kendo/kendo.dataviz.bootstrap.min.css') }}" rel="stylesheet" />
+    -->
+    <link href="{{ url_for('static', filename='css/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/ng-tags-input.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/zstack1.css') }}" rel="stylesheet" />
+    <link rel="icon" href="{{ url_for('static', filename='images/zstack_text_icon_32x32.gif') }}" type="image/gif">
+    <link rel="shorcut icon" href="{{ url_for('static', filename='images/zstack_text_icon_32x32.png') }}">
+</head>
+
+
+<body  >
+<div class="modal fade hiden">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">分布式云系统</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">保存修改 </button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+  
+
+<span kendo-notification="apiNotification" k-options="optionsNotification"></span>
+<div ng-include="'/static/templates/zone/templates.html'"></div>
+ 
+
+<nav class="navbar navbar-default" role="navigation">
+	<div class="navbar-header" ng-controller="MNav.Controller">
+        <a class="navbar-brand" href="#">
+            <span>&nbsp; DistributionCloud 1.0<img src="static/img/logo.gif" width="17px" height="17px">  </span>
+        </a>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown" >
+                <a href class="dropdown-toggle" data-toggle="dropdown">
+                 <i class="fa fa-lg fa-language"></i>
+                   修改语言
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="" >English</a></li>
+                    <li><a href="" >简体中文</a></li>
+                    <li><a href="" >繁体中文</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid col-sm-24">
+    <div class="row">
+        <div id="sidebar" class="col-sm-4" ng-show="isLogin()">
+            <div class="panel-group" id="menu">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-target="#image" href="/#/dashboard">
+                            仪表盘
+                            </a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-target="#image" href="/#/dashboard">
+                           厂商管理
+                            </a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-target="#image" href="/#/dashboard">
+                            主机管理
+                            </a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+</div>
+ 
+
+<script src="{{ url_for('static', filename='js/jquery-1.9.1.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/angular.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/angular-route.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/angular-cookies.js') }}"></script>
+<script src="{{ url_for('static', filename='js/angular-translate.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/angular-translate-loader-static-files.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/angular-translate-storage-cookie.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/kendo.all.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/sha512.js') }}"></script>
+<script src="{{ url_for('static', filename='js/ng-tags-input.js') }}"></script>
+<script src="{{ url_for('static', filename='app/app.js') }}"></script>
+</body>
+
+</html>
