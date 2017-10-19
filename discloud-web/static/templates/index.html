@@ -8,9 +8,6 @@
     <link href="{{ url_for('static', filename='css/kendo/kendo.uniform.min.css') }}" rel="stylesheet" />
     <link href="{{ url_for('static', filename='css/kendo/kendo.dataviz.min.css') }}" rel="stylesheet" />
     <link href="{{ url_for('static', filename='css/kendo/kendo.dataviz.uniform.min.css') }}" rel="stylesheet" />
-    <!--
-    <link href="{{ url_for('static', filename='css/kendo/kendo.dataviz.bootstrap.min.css') }}" rel="stylesheet" />
-    -->
     <link href="{{ url_for('static', filename='css/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
     <link href="{{ url_for('static', filename='css/ng-tags-input.css') }}" rel="stylesheet" />
     <link href="{{ url_for('static', filename='css/zstack1.css') }}" rel="stylesheet" />
@@ -19,7 +16,7 @@
 </head>
 
 
-<body  >
+<body   ng-controller="MRoot.main" ng-cloak>
 <div class="modal fade hiden">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -41,13 +38,13 @@
   
 
 <span kendo-notification="apiNotification" k-options="optionsNotification"></span>
-<div ng-include="'/static/templates/zone/templates.html'"></div>
+<!-- <div ng-include="'/static/templates/zone/templates.html'"></div> -->
  
 
 <nav class="navbar navbar-default" role="navigation">
 	<div class="navbar-header" ng-controller="MNav.Controller">
         <a class="navbar-brand" href="#">
-            <span>&nbsp; DistributionCloud 1.0<img src="static/img/logo.gif" width="17px" height="17px">  </span>
+            <span>&nbsp; DistributionCloud 1.0<img src="static/img/logo.jpg" width="17px" height="17px">  </span>
         </a>
     </div>
     <div class="collapse navbar-collapse">
